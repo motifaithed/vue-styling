@@ -6,6 +6,16 @@ const app = Vue.createApp({
       boxSelectedC: false,
     };
   },
+  computed:{
+    setBoxAClasses(){
+        return {active: this.boxSelectedA}
+    },setBoxBClasses(){
+        return {active: this.boxSelectedB}
+    },
+    setBoxCClasses(){
+        return {active: this.boxSelectedC}
+    }
+  },
   methods: {
     selectBox(box) {
       console.log(box);
